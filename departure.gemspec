@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'departure'
   spec.version       = Departure::VERSION
   spec.authors       = ['Ilya Zayats', 'Pau Pérez', 'Fran Casas', 'Jorge Morante', 'Enrico Stano', 'Adrian Serafin', 'Kirk Haines', 'Guillermo Iguaran']
-  spec.email         = ['ilya.zayats@redbooth.com', 'pau.perez@redbooth.com', 'fran.casas@redbooth.com', 'jorge.morante@redbooth.com', 'adrian@softmad.pl', 'wyhaines@gmail.com', 'guilleiguaran@gmail.com']
+  spec.email         = ['ilya.zayats@redbooth.com', 'pau.perez@redbooth.com', 'nflamel@gmail.com', 'jorge.morante@redbooth.com', 'adrian@softmad.pl', 'wyhaines@gmail.com', 'guilleiguaran@gmail.com']
 
   spec.summary       = %q(pt-online-schema-change runner for ActiveRecord migrations)
   spec.description   = %q(Execute your ActiveRecord migrations with Percona's pt-online-schema-change. Formerly known as Percona Migrator.)
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'railties', '>= 5.2.0'
   spec.add_runtime_dependency 'activerecord', '>= 5.2.0'
-  spec.add_runtime_dependency 'mysql2', '~> 0.4.0'
+  spec.add_runtime_dependency 'mysql2', '>= 0.4.0', '<= 0.5.2'
 
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.4', '>= 3.4.0'
