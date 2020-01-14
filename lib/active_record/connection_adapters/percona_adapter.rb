@@ -139,7 +139,7 @@ module ActiveRecord
 
       def full_version
         if ActiveRecord::VERSION::MAJOR < 6
-          mysql_adapter.raw_connection.server_info[:version]
+          get_full_version
         else
           schema_cache.database_version.full_version_string
         end
