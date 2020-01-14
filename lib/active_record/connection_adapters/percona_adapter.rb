@@ -138,6 +138,14 @@ module ActiveRecord
       def error_number(_exception); end
 
       def full_version
+        if ActiveRecord::VERSION::MAJOR < 6
+          mysql_adapter.raw_connection.server_info[:version]
+        else
+          schema_cache.database_version.full_version_string
+        end
+      end
+
+      def get_full_version
         mysql_adapter.raw_connection.server_info[:version]
       end
 
